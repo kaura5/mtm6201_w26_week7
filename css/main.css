@@ -1,0 +1,34 @@
+.leaf {
+    /* fill: blanchedalmond; */
+    transform: rotate(45deg);
+    transform-origin: center;
+    transform-origin: 100px 100px;
+}
+
+.cls-1 {
+    fill: #ed8c65;
+}
+
+.cls-2 {
+    fill: #fff;
+}
+
+.cls-3 {
+    fill: #ea6329;
+}
+
+@keyframes move{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(8px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.pupil{
+    animation: move 1s infinite;
+}

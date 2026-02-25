@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 | SVG</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header>
+        <h1>SVG's</h1>
+    </header>
+    <main>
+        <h2>SVG linked from a file</h2>
+        <img src="./images/my_first.svg" alt="">
+
+        <h2>SVG embedded in HTML</h2>
+        <svg width="200" height="200" viewBox="0 0 200 200">
+            <rect width="200" height="200" fill="#dede33" rx="10" ry="10" stroke="#000" stroke-width="6" />
+            <circle cx="50" cy="50" r="25" fill="#d50000" stroke="#000" stroke-width="4" />
+        </svg>
+
+        <h2>Ellipse Practice</h2>
+        <svg width="200" height="200" viewBox="0 0 200 200">
+            <rect width="200" height="200" fill="#dede33" rx="10" ry="10" stroke="#000" stroke-width="6" />
+            <ellipse cx="100" cy="100" rx="100" ry="50" fill="#d50000" />
+            <ellipse cx="100" cy="100" rx="50" ry="100" fill="#d50000" />
+            <ellipse class="leaf" cx="100" cy="100" rx="50" ry="100" fill="#d50000" />
+        </svg>
+
+        <h2>copy paste elements</h2>
+        <svg width="200" height="200" viewBox="0 0 200 200">
+            <rect width="200" height="200" fill="#4dd0e1" />
+            <circle id="dot" cx="50" cy="50" r="25" fill="#4d5000" />
+            <use href="#dot" x="100" y="0" />
+            <use href="#dot" x="0" y="100" />
+            <use href="#dot" x="100" y="100" />
+            <use href="#dot" x="50" y="50" />
+        </svg>
+
+        <h2>defs element</h2>
+        <svg width="300" height="200" viewBox="0 0 300 200">
+            <defs>
+                <rect id="brick" width="200" height="100" fill="#CFBEE1" />
+                <circle id="ball" r="50" fill="#8CC9BB" />
+            </defs>
+            <use href="#brick" />
+            <use href="#ball" x="200" y="50" />
+            <use href="#brick" x="50" y="100" />
+            <use href="#ball" x="50" y="150" />
+        </svg>
+
+        <h2>Text and Gradient in svg</h2>
+
+        <svg width="400" height="200" viewBox="0 0 400 200">
+            <defs>
+                <linearGradient id="mygradient">
+                    <stop offset="0%" stop-color="red" />
+                    <stop offset="50%" stop-color="black" />
+                    <stop offset="100%" stop-color="gold" />
+                </linearGradient>
+            </defs>
+
+            <text fill="url(#mygradient)" x="0" y="100" font-size="3rem">Sunday</text>
+        </svg>
+
+        <svg width="300" height="200" viewBox="0 0 300 200">
+            <defs>
+                <pattern height="200" width="300" id="placehold" patternUnits="userSpaceOnUse">
+                    <image
+                        href="https://media.istockphoto.com/id/1469498103/photo/the-change-of-the-four-seasons-on-a-tree.jpg?s=612x612&w=is&k=20&c=0oItIJDStGKU1JwlChAg1rxNe8-Kk1L8M6H2KChzw7c=" />
+                </pattern>
+            </defs>
+            <text x="0" y="100" fill="url(#placehold)" font-size="6.5rem">Pattern</text>
+        </svg>
+
+        <!-- embedded code from svg -->
+
+        <svg id="smily" viewBox="0 0 487 484" width="487" height="484">
+            <g id="face">
+                <circle class="cls-1" cx="241" cy="243" r="234" />
+            </g>
+            <path id="mouth" class="cls-2" d="M100,292H381.79s-18,78-140.9,78S100,292,100,292Z" />
+            <ellipse id="eye-l" class="cls-2" cx="141.5" cy="154" rx="37.5" ry="65" />
+            <ellipse id="eye-r" class="cls-2" cx="342.5" cy="154" rx="37.5" ry="65" />
+            <circle id="pupil-l" class="pupil" cx="137.5" cy="182.5" r="24.5" />
+            <circle id="pupil-r" class="pupil" cx="337.5" cy="182.5" r="24.5" />
+            <path id="eyelash-l" class="cls-3"
+                d="M179,154c-37,2-37,0-75,0,0-35.9,16.79-65,37.5-65S179,118.1,179,154Z" />
+            <path id="eyelash-r" class="cls-3"
+                d="M380,154c-37,2-37,0-75,0,0-35.9,16.79-65,37.5-65S380,118.1,380,154Z" />
+        </svg>
+    </main>
+</body>
+
+</html>

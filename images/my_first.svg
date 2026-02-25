@@ -1,0 +1,7 @@
+<svg width="200" height="200" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <!-- SVG graphic code here -->
+  <rect width="200" height="200" fill="#cfbee1" rx="10" ry="10" />
+  <rect width="150" height="150" fill="#dede22" x="25" y="25" rx="10" ry="10" />
+  <circle r="50" cx="100" cy="100" fill="#d24949ee" />
+
+</svg>
